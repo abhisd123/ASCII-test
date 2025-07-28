@@ -73,7 +73,7 @@ image::example.png[Example Image]
 * Test rendering in your target output format (HTML, PDF, etc.).
 
 Example:
-image:/D:/ASCII_document_exercise/Images/Pig_lifecycle.png[Pig lifecycle, width=500, align=center]
+image: Images/Pig_lifecycle.png[Pig lifecycle, width=500, align=center]
 
 
 == Conclusion
