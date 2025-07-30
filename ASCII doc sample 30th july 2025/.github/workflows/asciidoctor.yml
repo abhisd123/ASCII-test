@@ -1,0 +1,20 @@
+name: Build AsciiDoc and Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Build and Deploy AsciiDoc
+        uses: manoelcampos/asciidoctor-ghpages-action@v1
+        with:
+          source_dir: docs
+          pdf_build: false
+          slides_build: false
