@@ -1,0 +1,17 @@
+:toc:
+= Best Practices (Topic 2)
+
+== Best Practices to follow
+* Use descriptive alt text for accessibility.
+* Keep image file names meaningful and consistent.
+* Use relative paths to ensure portability.
+* Set `:imagesdir:` to avoid repeating folder paths.
+* Test rendering in your target output format (HTML, PDF, etc.).
+
+Example:
+image:/D:/ASCII_document_exercise/Images/Pig_lifecycle.png[Pig lifecycle, width=500, align=center]
+
+
+== Conclusion
+
+AsciiDoc provides a powerful and flexible way to include images in your documentation. Follow these steps and best practices to ensure your images are displayed correctly and consistently.
