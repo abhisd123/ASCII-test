@@ -1,0 +1,32 @@
+name: AsciiDoc Auto Publish
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.1'
+
+    - name: Install Asciidoctor tools
+      run: |
+        gem install asciidoctor
+        gem install asciidoctor-pdf
+
+    - name: Convert AsciiDoc to HTML and PDF
+      run: bash convert.sh
+
+    - name: Upload output
+      uses: actions/upload-artifact@v3
+      with:
+        name: asciidoc-output
+        path: output/
