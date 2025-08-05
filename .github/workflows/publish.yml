@@ -29,7 +29,6 @@ jobs:
         inputPath: ASCII-test
         outputPath: ASCII-test
       
-
     - name: Upload output
       uses: actions/upload-artifact@v3
       with:
