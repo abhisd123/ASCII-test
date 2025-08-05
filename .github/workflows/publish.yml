@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
+    - name: Checkout repository
       uses: actions/checkout@v3
 
     - name: Set up Ruby
@@ -22,18 +22,14 @@ jobs:
         gem install asciidoctor
         gem install asciidoctor-pdf
 
-    - name: Convert AsciiDoc to HTML
-      uses: quirinecker/asciidoctor-convert-action@96fafffb96d367e48e3ed031699add150ea92fc2
-      uses: quirinecker/asciidoctor-convert-action@1.3
-      with:
-        inputPath: ASCII-test
-        outputPath: ASCII-test
-      
+    - name: Make convert.sh executable
+      run: chmod +x convert.sh
+
+    - name: Convert AsciiDoc to HTML and PDF
+      run: ./convert.sh
+
     - name: Upload output
       uses: actions/upload-artifact@v3
       with:
         name: asciidoc-output
         path: output/
-
-      - name: Make convert.sh executable
-        run: chmod +x convert.sh
