@@ -24,6 +24,7 @@ jobs:
 
     - name: Convert AsciiDoc to HTML and PDF
       run: bash convert.sh
+      
     - name: Upload output
       uses: actions/upload-artifact@v3
       with:
