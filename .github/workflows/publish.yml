@@ -4,9 +4,11 @@ on:
   push:
     branches: [ main ]
 
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
 
     steps:
     - name: Checkout code
@@ -17,19 +19,23 @@ jobs:
       with:
         ruby-version: '3.1'
 
+
     - name: Install Asciidoctor tools
       run: |
         gem install asciidoctor
         gem install asciidoctor-pdf
 
+
     - name: Convert AsciiDoc to HTML and PDF
       run: bash convert.sh
+
 
     - name: Upload output
       uses: actions/upload-artifact@v3
       with:
         name: asciidoc-output
         path: output/
+
 
       - name: Make convert.sh executable
         run: chmod +x convert.sh
