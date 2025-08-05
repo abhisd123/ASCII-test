@@ -30,3 +30,7 @@ jobs:
       with:
         name: asciidoc-output
         path: output/
+
+      - name: Make convert.sh executable
+        run: chmod +x convert.sh
+
