@@ -1,0 +1,28 @@
+= Feature Overview
+Abhishek Sanjay Deshpande
+:toc:
+:toclevels: 2
+
+== Key Features
+
+=== 1. Lightweight Authoring
+
+AsciiDoc syntax is clean, readable, and easy to maintain — perfect for technical documentation.
+
+=== 2. Multi-Format Output
+
+Generate both HTML and PDF from the same source files using Asciidoctor.
+
+=== 3. GitHub Integration
+
+Automated publishing using GitHub Actions ensures your documentation is always up to date.
+
+=== 4. Modular Structure
+
+Organize content into multiple `.adoc` files and include or link them as needed.
+
+== Future Enhancements
+
+* Integration with Antora for site generation
+* GitHub Pages deployment for public access
+* Versioned documentation support
