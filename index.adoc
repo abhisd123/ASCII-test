@@ -1,0 +1,14 @@
+= Project Documentation
+Abhishek Sanjay Deshpande
+:toc:
+:toclevels: 2
+
+Welcome to the documentation for our project.
+
+== Getting Started
+
+Refer to <<setup.adoc#,Setup Guide>> to begin.
+
+== Features
+
+See <<features.adoc#,Feature Overview>> for details
