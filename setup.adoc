@@ -1,0 +1,49 @@
+= Setup Guide
+Abhishek Sanjay Deshpande
+:toc:
+:toclevels: 2
+
+== Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+* Ruby (>= 3.0)
+* Asciidoctor
+* Asciidoctor PDF
+
+== Installation Steps
+
+=== 1. Install Ruby
+
+Download and install Ruby from the official site: https://www.ruby-lang.org
+
+=== 2. Install Asciidoctor
+
+Run the following command:
+
+[source, bash]
+----
+gem install asciidoctor asciidoctor-pdf
+----
+
+=== 3. Clone the Repository
+
+[source, bash]
+----
+git clone https://github.com/your-username/your-repo.git
+cd your-repo
+----
+
+=== 4. Convert AsciiDoc Files
+
+To generate HTML and PDF outputs:
+
+[source, bash]
+----
+bash convert.sh
+----
+
+== Troubleshooting
+
+* If you encounter permission issues, try using `sudo` with the install commands.
+* Ensure your Ruby environment is correctly set up using `rbenv` or `rvm` if needed.
