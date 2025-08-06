@@ -1,0 +1,20 @@
+title: My Jekyll Site
+description: A site using AsciiDoc content
+baseurl: "" # or "/repo-name" if hosted on GitHub Pages
+url: "https://yourusername.github.io"
+
+markdown: kramdown
+theme: minima
+
+plugins:
+  - jekyll-asciidoc
+  - jekyll-sitemap
+
+asciidoc:
+  require_front_matter_header: false
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
