@@ -1,9 +1,13 @@
 
 #!/bin/bash
+set -e  # Exit on error
+set -x  # Print commands for debugging
 
-# Create output folders
-mkdir -p output
+# Install Asciidoctor (only needed in GitHub Actions)
+gem install asciidoctor
+
+# Create output folder
 mkdir -p docs
 
-# Convert all .adoc files to HTML and place in docs/ for GitHub Pages
-asciidoctor index.adoc
+# Convert .adoc to HTML and place in docs/
+asciidoctor -D docs index.adoc
