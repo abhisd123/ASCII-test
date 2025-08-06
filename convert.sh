@@ -6,4 +6,4 @@ mkdir -p output
 mkdir -p docs
 
 # Convert all .adoc files to HTML and place in docs/ for GitHub Pages
-asciidoctor index.html *.adoc
+asciidoctor --index.html *.adoc
